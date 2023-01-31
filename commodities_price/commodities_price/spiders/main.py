@@ -4,6 +4,14 @@ from scrapy.shell import inspect_response
 from scrapy.utils.response import open_in_browser
 import pandas as pd
 
+# Logging DEBUG
+import logging
+logger = logging.getLogger('my_logger')
+# logging.warning("This is a warning")
+logging.basicConfig(filename="logfile.txt", 
+                    format='%(asctime)s - %(levelname)s - %(message)s', 
+                    filemode='w',
+                    level = logging.DEBUG)
 class MainSpider(scrapy.Spider):
     name = 'main'
     #allowed_domains = ['x']
