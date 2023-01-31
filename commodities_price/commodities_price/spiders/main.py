@@ -1,11 +1,13 @@
 import scrapy
 from scrapy import FormRequest
 from scrapy.shell import inspect_response
+from scrapy.utils.response import open_in_browser
+import pandas as pd
 
 class MainSpider(scrapy.Spider):
     name = 'main'
     #allowed_domains = ['x']
-    start_urls = ['http://x/']
+    #start_urls = ['http://x/']
 
     url = 'https://fcainfoweb.nic.in/reports/report_menu_web.aspx'
 
@@ -40,13 +42,30 @@ class MainSpider(scrapy.Spider):
 
     def start_requests(self):
         yield scrapy.Request(
-            url=url,
+            url=self.url,
             method='POST',
             dont_filter=True,
-            cookies=cookies,
-            headers=headers,
-            body=body,
+            cookies=self.cookies,
+            headers=self.headers,
+            body=self.body,
         )
 
     def parse(self, response):
-        pass
+        formdata = {
+            "ctl00$MainContent$Ddl_Rpt_type": "Retail",
+            "ctl00$MainContent$ddl_Language": "English",
+            "ctl00$MainContent$Rbl_Rpt_type": "Price report",
+            "ctl00$MainContent$Ddl_Rpt_Option0": "Daily Prices",
+            "ctl00$MainContent$Txt_FrmDate": "30/01/2023",
+            "ctl00$MainContent$btn_getdata1": "Get Data",
+        }
+
+        yield FormRequest.from_response(
+            response=response,
+            formdata=formdata,
+            headers=self.headers,
+            callback=self.parse_table
+        )
+    
+    def parse_table(self, response):
+        open_in_browser(response)
