@@ -1,6 +1,5 @@
 # Dept Of Consumer Affair India Essential Commodities Price ASPX POST Scraping
 - Scraping Essential Commodities Price from Department of Consumer Affair India
-- Scraping essential commodities price in India.
 - ASPX scraping, include post method. We have to pick the given option in order to parse the data.
 - Scraping framework : Scrapy
 - Parsed data were saved into dataframe using Pandas and later on converted into csv.
