@@ -20,9 +20,6 @@ class MainSpider(scrapy.Spider):
             "ctl00$MainContent$Ddl_Rpt_type": "Retail",
             "ctl00$MainContent$ddl_Language": "English",
             "ctl00$MainContent$Rbl_Rpt_type": "Price report",
-            # "ctl00$MainContent$Ddl_Rpt_Option0": "Daily Prices",
-            # "ctl00$MainContent$Txt_FrmDate": "30/01/2023",
-            # "ctl00$MainContent$btn_getdata1": "Get Data",
         }
 
         yield FormRequest.from_response(
