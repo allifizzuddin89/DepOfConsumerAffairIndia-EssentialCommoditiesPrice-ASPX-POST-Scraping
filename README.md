@@ -37,7 +37,7 @@
 ```bash
   conda activate scraping_env
 ```
-- Run the spider, if you already inside working directory, please [runspider main.py], else,
+- Run the spider, if you already inside working directory, please [scrapy runspider main.py], else,
  ```bash
     scrapy runspider /DepOfConsumerAffairIndia-EssentialCommoditiesPrice-ASPX-POST-Scraping/tree/main/commodities_price/commodities_price/spiders/main.py
  ```
