@@ -1,7 +1,5 @@
 import scrapy
 from scrapy import FormRequest
-from scrapy.shell import inspect_response
-from scrapy.utils.response import open_in_browser
 import pandas as pd
 
 # Logging DEBUG
