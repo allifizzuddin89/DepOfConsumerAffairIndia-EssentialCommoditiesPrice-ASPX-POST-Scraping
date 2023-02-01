@@ -23,7 +23,6 @@ class MainSpider(scrapy.Spider):
         yield FormRequest.from_response(
             response=response,
             formdata=formdata,
-            # headers=self.headers,
             callback=self.step2
         )
     
