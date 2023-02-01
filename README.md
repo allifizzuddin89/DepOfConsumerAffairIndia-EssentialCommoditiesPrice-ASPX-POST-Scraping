@@ -2,7 +2,7 @@
 - Scraping Essential Commodities Price from Department of Consumer Affair India
 - ASPX scraping, include post method. We have to pick the given option in order to parse the data.
 - Scraping framework : Scrapy
-- Parsed data were saved into dataframe using Pandas and later on converted into csv.
+- Parsed data were saved into dataframe using Pandas and later on published as csv files.
 
 ## Requirement : 
 - Scrapy 2.7.1
