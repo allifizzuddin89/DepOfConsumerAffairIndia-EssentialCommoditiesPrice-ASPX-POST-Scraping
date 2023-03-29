@@ -4,6 +4,9 @@
 - Scraping framework : Scrapy
 - Parsed data were saved into dataframe using Pandas and later on published as csv files.
 
+# Result
+- Please see one of the generated scraped data in [result](https://github.com/allifizzuddin89/DepOfConsumerAffairIndia-EssentialCommoditiesPrice-ASPX-POST-Scraping/blob/main/commodities_price/commodities_price/spiders/Commodity_price_0.csv)
+
 ## Requirement : 
 - Scrapy 2.7.1
 - Python 3.7 or above
